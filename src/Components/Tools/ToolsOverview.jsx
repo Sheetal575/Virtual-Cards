@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Button, Tab, Tabs } from "@mui/material";
 import {
-  FileSearch,
-  Funnel,
   FunnelSimple,
   List,
   MagnifyingGlass,
@@ -47,7 +45,7 @@ export default function ToolsOverview({
             onClick={() => handleViewMode("List")}
             style={{
               minWidth: "0",
-              color: viewMode == "List" ? "#E85467" : "grey",
+              color: viewMode === "List" ? "#E85467" : "grey",
             }}
           >
             <List size={28} weight="bold" />
@@ -57,7 +55,7 @@ export default function ToolsOverview({
             onClick={() => handleViewMode("Grid")}
             style={{
               minWidth: "0",
-              color: viewMode == "Grid" ? "#E85467" : "grey",
+              color: viewMode === "Grid" ? "#E85467" : "grey",
             }}
           >
             <SquaresFour size={28} weight="fill" />

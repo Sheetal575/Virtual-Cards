@@ -1,4 +1,4 @@
-import { Button, Card, Chip } from "@mui/material";
+import { Card, Chip } from "@mui/material";
 import React from "react";
 import CoinDetails from "../../../Utilities/CoinDetails/CoinDetails";
 
@@ -66,7 +66,7 @@ export default function GridViewOverview({ cardData, searchQuery }) {
                     height: "20px",
                   }}
                 />
-                {data.status == "Blocked" ? (
+                {data.status === "Blocked" ? (
                   <Chip
                     label="Blocked"
                     variant="Blocked"

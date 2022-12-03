@@ -5,7 +5,6 @@ import {
   TableRow,
   TableBody,
   Table,
-  TableHead,
   Chip,
 } from "@mui/material";
 export default function ListViewOverview({ cardData }) {
@@ -53,10 +52,10 @@ export default function ListViewOverview({ cardData }) {
                     width: "40%",
 
                     border:
-                      data.status == "active"
+                      data.status === "active"
                         ? "2px solid green"
                         : "2px solid red",
-                    color: data.status == "active" ? "green" : "red",
+                    color: data.status === "active" ? "green" : "red",
                     fontWeight: "600",
                   }}
                 />
