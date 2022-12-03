@@ -94,15 +94,11 @@ export default function GridViewOverview({ cardData, searchQuery }) {
                 height: "12px",
               }}
             ></div>
-            <CoinDetails
-              color={"#E85467"}
-              title={"Spent"}
-              coin={`${data.spent.value}``${data.spent.currency}`}
-            />
+            <CoinDetails color={"#E85467"} title={"Spent"} coin={`2 SGD`} />
             <CoinDetails
               color={"#018749"}
               title={"Available to spend"}
-              coin={`${data.available_to_spend.value}``${data.available_to_spend.currency}`}
+              coin={`5 SGD`}
             />
           </Card>
         ))
