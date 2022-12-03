@@ -26,7 +26,7 @@ export default function HomeOverview() {
     } else {
       setVirtualCardDetails(VirtualCardsData);
     }
-  }, [view]);
+  }, [view, virtualCardDetails]);
 
   const handleView = (e) => {
     setView(e);
