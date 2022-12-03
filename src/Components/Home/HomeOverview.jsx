@@ -15,23 +15,17 @@ export default function HomeOverview() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    const handleDataForView = () => {
-      var filterCardData = [];
-      if (view === "Blocked") {
-        filterCardData = virtualCardDetails.filter(
-          (e) => e.status === "Blocked"
-        );
-        setVirtualCardDetails(filterCardData);
-      } else if (view === "MyCards") {
-        //owner_id == "1" is considered hard codedly as no authentication implemented
-        filterCardData = virtualCardDetails.filter((e) => e.owner_id === "1");
-        setVirtualCardDetails(filterCardData);
-      } else {
-        setVirtualCardDetails(VirtualCardsData);
-      }
-    };
-
-    handleDataForView();
+    var filterCardData = [];
+    if (view === "Blocked") {
+      filterCardData = virtualCardDetails.filter((e) => e.status === "Blocked");
+      setVirtualCardDetails(filterCardData);
+    } else if (view === "MyCards") {
+      //owner_id == "1" is considered hard codedly as no authentication implemented
+      filterCardData = virtualCardDetails.filter((e) => e.owner_id === "1");
+      setVirtualCardDetails(filterCardData);
+    } else {
+      setVirtualCardDetails(VirtualCardsData);
+    }
   }, [view]);
 
   const handleView = (e) => {
