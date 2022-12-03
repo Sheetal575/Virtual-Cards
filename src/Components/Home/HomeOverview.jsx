@@ -20,12 +20,12 @@ export default function HomeOverview() {
 
   const handleDataForView = () => {
     var filterCardData = [];
-    if (view == "Blocked") {
-      filterCardData = virtualCardDetails.filter((e) => e.status == "Blocked");
+    if (view === "Blocked") {
+      filterCardData = virtualCardDetails.filter((e) => e.status === "Blocked");
       setVirtualCardDetails(filterCardData);
-    } else if (view == "MyCards") {
+    } else if (view === "MyCards") {
       //owner_id == "1" is considered hard codedly as no authentication implemented
-      filterCardData = virtualCardDetails.filter((e) => e.owner_id == "1");
+      filterCardData = virtualCardDetails.filter((e) => e.owner_id === "1");
       setVirtualCardDetails(filterCardData);
     } else {
       setVirtualCardDetails(VirtualCardsData);
@@ -100,7 +100,7 @@ export default function HomeOverview() {
             gap: "22px",
           }}
         >
-          {viewMode == "Grid" ? (
+          {viewMode === "Grid" ? (
             <GridViewOverview
               searchQuery={searchQuery}
               cardData={
