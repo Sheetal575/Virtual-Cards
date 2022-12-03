@@ -49,7 +49,7 @@ export default function HomeOverview({
           />
         </div>
 
-        <Outlet name="jk" />
+        <Outlet />
       </div>
       <div>
         <Modal open={isFilterModalOpen} onClose={() => handleFilterModalOpen()}>

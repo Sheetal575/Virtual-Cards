@@ -9,11 +9,9 @@ export default function CardViewOverview({ viewMode, searchQuery }) {
 
   const path = window.location.pathname.slice(1);
   useEffect(() => {
-    console.log(path);
     var filterCardData = [];
     if (path === "blocked-cards") {
       filterCardData = VirtualCardsData.filter((e) => e.status === "Blocked");
-      console.log(filterCardData);
       setVirtualCardDetails(filterCardData);
     } else if (path === "my-cards") {
       //owner_id == "1" is considered hard codedly as no authentication implemented
