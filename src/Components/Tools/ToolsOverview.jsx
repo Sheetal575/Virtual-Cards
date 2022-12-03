@@ -8,15 +8,15 @@ import {
   X,
 } from "phosphor-react";
 import "./ToolsOverview.style.css";
+import { useNavigate } from "react-router-dom";
 export default function ToolsOverview({
-  view,
-  handleView,
   handleViewMode,
   handleFilterModalOpen,
   viewMode,
   handleSearchQuery,
 }) {
   const [showSearchBar, setShowSearchBar] = useState(false);
+  const navigate = useNavigate();
   return (
     <>
       <div
@@ -31,12 +31,12 @@ export default function ToolsOverview({
           <Tabs
             textColor="inherit"
             indicatorColor="primary"
-            value={view}
-            onChange={(event, value) => handleView(value)}
+            value={window.location.pathname.slice(1)}
+            onChange={(event, value) => navigate(`/${value}`)}
           >
-            <Tab label={<div>My Cards</div>} value={"MyCards"} />
-            <Tab label={<div>All</div>} value={"All"} />
-            <Tab label={<div>Blocked</div>} value={"Blocked"} />
+            <Tab label={<div>My Cards</div>} value={"my-cards"} />
+            <Tab label={<div>All</div>} value={""} />
+            <Tab label={<div>Blocked</div>} value={"blocked-cards"} />
           </Tabs>
         </div>
         <div>
